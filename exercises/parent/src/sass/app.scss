@@ -4,6 +4,16 @@
   margin: auto;
   background: #eee;
 
+  &.right-nav {
+    .main {
+      margin-right: 220px;
+      margin-left: 0px;
+    }
+    .sidebar {
+      float: right;
+    }
+  }
+
   .sidebar,
   .main { padding: 10px; }
 
