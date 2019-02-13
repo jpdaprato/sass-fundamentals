@@ -12,12 +12,12 @@ input[type="range"] {
     @include base-repeat();
     cursor: pointer;
     animate: 0.2s;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    box-shadow: $box-shadow;
     border: 0.2px solid #010101;
   }
   @include thumb() {
     @include base-repeat(36px, 16px, 3px, #ffffff);
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    box-shadow: $box-shadow;
     border: 1px solid #000000;
     cursor: pointer;
   }
@@ -37,6 +37,6 @@ input[type="range"] {
   @include ms-fill() {
     border: 0.2px solid #010101;
     border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    box-shadow: $box-shadow;
   }
 }
