@@ -1,4 +1,4 @@
-@mixin range-thumb($height: 8.4px, $width: 100%, $border-radius: 1.3px, $background: #3071a9) {
+@mixin base-repeat($height: 8.4px, $width: 100%, $border-radius: 1.3px, $background: #3071a9) {
   height: $height;
   width: $width;
   border-radius: $border-radius;
