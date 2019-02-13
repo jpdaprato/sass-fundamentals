@@ -27,3 +27,20 @@
     @content;
   }
 }
+
+@mixin ms-fill() {
+  &::-ms-fill-lower {
+    background: #2a6495;
+    @content;
+  }
+  &::-ms-fill-upper {
+    background: #3071a9;
+    @content;
+  }
+  &:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  &:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+}
