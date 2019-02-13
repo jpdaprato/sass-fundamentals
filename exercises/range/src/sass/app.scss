@@ -8,7 +8,7 @@ input[type="range"] {
   &:focus {
     outline: none;
   }
-  &::-webkit-slider-runnable-track {
+  @include range-track() {
     @include range-thumb();
     cursor: pointer;
     animate: 0.2s;
@@ -26,13 +26,13 @@ input[type="range"] {
   &:focus::-webkit-slider-runnable-track {
     background: #367ebd;
   }
-  &::-moz-range-track {
-    @include range-thumb();
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 0.2px solid #010101;
-  }
+  // &::-moz-range-track {
+  //   @include range-thumb();
+  //   cursor: pointer;
+  //   animate: 0.2s;
+  //   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  //   border: 0.2px solid #010101;
+  // }
   &::-moz-range-thumb {
     @include range-thumb(36px, 16px, 3px, #ffffff);
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;

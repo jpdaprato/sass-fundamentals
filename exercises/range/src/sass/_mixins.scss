@@ -4,3 +4,12 @@
   border-radius: $border-radius;
   background: $background;
 }
+
+@mixin range-track() {
+  &::-webkit-slider-runnable-track {
+    @content;
+  }
+  &::-moz-range-track {
+    @content;
+  }
+}
