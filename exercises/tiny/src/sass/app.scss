@@ -26,13 +26,11 @@ $directions: (
   right: "r"
 );
 
-$values: (5, 10, 15, 20, 25);
-
 @each $property, $propAbbr in $properties {
   @each $direction, $dirAbbr in $directions {
-    @each $value in $values {
-      .#{$propAbbr}-#{$dirAbbr}-#{$value} {
-        #{$property}-#{$direction}: $value;
+    @for $i from 1 through 5 {
+      .#{$propAbbr}-#{$dirAbbr}-#{$i * 5} {
+        #{$property}-#{$direction}: $i * 5;
       }
     }
   }
