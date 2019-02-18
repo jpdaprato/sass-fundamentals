@@ -1,0 +1,39 @@
+/*
+2 Properties: margin and padding
+4 Directions: top, bottom, left, right
+5 increments: 5, 10, 15, 20, 25
+
+Total: 2 * 4 * 5 = 40
+
+EXAMPLE:
+
+m-t-5 {
+  margin-top: 5;
+}
+
+STRATEGY: triple-nested loops; map to store and access abbreviations
+*/
+
+$properties: (
+  margin: "m",
+  padding: "p"
+);
+
+$directions: (
+  top: "t",
+  bottom: "b",
+  left: "l",
+  right: "r"
+);
+
+$values: (5, 10, 15, 20, 25);
+
+@each $property, $propAbbr in $properties {
+  @each $direction, $dirAbbr in $directions {
+    @each $value in $values {
+      .#{$propAbbr}-#{$dirAbbr}-#{$value} {
+        #{$property}-#{$direction}: $value;
+      }
+    }
+  }
+}
