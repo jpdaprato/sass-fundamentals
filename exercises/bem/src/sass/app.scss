@@ -1,3 +1,5 @@
+@import "_mixins";
+
 body {
   h1 {
     color: #c69;
@@ -15,23 +17,8 @@ body {
   }
   &__price {
     background-color: #008000;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding: 1px 3px;
   }
-  &.btn--mode-primary {
-    background-color: rgb(204, 68, 102);
-    color: rgb(255, 255, 255);
-    &:disabled {
-      opacity: 0.5;
-    }
-  }
-  &.btn--mode-secondary {
-    background-color: rgb(237, 188, 200);
-    color: rgb(0, 0, 0);
-    &:disabled {
-      opacity: 0.5;
-    }
-  }
+  @include btn-mode(primary, rgb(204, 68, 102), rgb(255, 255, 255));
+  @include btn-mode(secondary, rgb(237, 188, 200), rgb(0, 0, 0));
 }
