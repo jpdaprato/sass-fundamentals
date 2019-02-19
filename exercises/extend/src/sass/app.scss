@@ -4,24 +4,21 @@ body {
   }
 }
 
-%padding {
+%primary-and-secondary {
   padding: 2px 10px;
+  &:disabled {
+    opacity: 0.5;
+  }
 }
 
 .btn-primary {
-  @extend %padding;
+  @extend %primary-and-secondary;
   border-radius: 2px;
   background-color: rgb(204, 68, 102);
   color: rgb(255, 255, 255);
-  &:disabled {
-    opacity: 0.5;
-  }
 }
 .btn-secondary {
-  @extend %padding;
+  @extend %primary-and-secondary;
   background-color: rgb(237, 188, 200);
   color: rgb(0, 0, 0);
-  &:disabled {
-    opacity: 0.5;
-  }
 }
