@@ -2,8 +2,5 @@
   &.btn--mode-#{$mode} {
     background-color: $bg_color;
     color: $color;
-    &:disabled {
-      opacity: 0.5;
-    }
   }
 }

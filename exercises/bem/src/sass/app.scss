@@ -12,8 +12,11 @@ body {
   border-width: 1px;
   line-height: 20px;
   border-radius: 2px;
-  &:disabled .btn__price {
-    background-color: #aaaaaa;
+  &:disabled {
+    opacity: 0.5;
+    .btn__price {
+      background-color: #aaaaaa;
+    }
   }
   &__price {
     background-color: #008000;
